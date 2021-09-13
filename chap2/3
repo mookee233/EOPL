@@ -1,0 +1,14 @@
+#lang eopl
+
+(define empty-stack
+  (lambda ()
+    eopl:error 'top "Empty stack"))
+(define push
+  (lambda (s x)
+    (lambda () x)))
+(define pop
+  (lambda (s)
+    (lambda () (cdr s))))
+(define top
+  (lambda (s)
+    (s)))
